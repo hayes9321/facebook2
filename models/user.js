@@ -48,7 +48,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     classMethods: {
       associate: function(models) {
-        models.user.belongsToMany(models.word,{ through:"map"}); 
+        //models.user.belongsToMany(models.word,{ through:"map"}); 
       }
     },
     instanceMethods: {
