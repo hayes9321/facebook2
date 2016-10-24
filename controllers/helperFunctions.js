@@ -4,13 +4,7 @@ function Word(unit, array){
   this.unit = unit;
   //this is what will follow the key.
   this.following = array;
-  // this.followContains = function(addUnit){
-  //   for(var i = 0; i < this.following.length; i++){
-  //     if(addUnit === this.following[i].unit){
-  //       return true;
-  //     }
-  //   }
-  //   return false;
+
   this.followingIncrementOrAdd = function(addUnit){
     for(var i = 0; i < this.following.length; i++){
       if(addUnit === this.following[i].unit){
@@ -18,7 +12,7 @@ function Word(unit, array){
         return;
       }
     }
-
+ 
     this.following.push({ unit: addUnit, count: 1});
   }
 }
@@ -59,9 +53,7 @@ function Map(words){
     }
     this.words.push(new Word(targetUnit, [{unit: addUnit, count: 1}]));
   }
-  // this.addStart = function(unit){
-  //   this.starts.push(unit);
-  // }
+  
   this.addEnding = function(unit){
     this.ends.push(unit);
   }

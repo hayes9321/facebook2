@@ -63,7 +63,8 @@ router.get('/results', function(req, res) {
         }
         // console.log(availableWords);
         while(symbol !== "$"){
-          return sentence += startWord + " " +randomize(availableWords) + " " +randomize(availableWords) + " "  + ends + ".";
+          var next = randomize(availableWords) + " " +randomize(nextWord) + " ";
+          return sentence += startWord + " " + next + ends + ".";
         }
       } 
       var result = generateSentence(results)  
@@ -76,5 +77,5 @@ router.get('/results', function(req, res) {
   });
 });
 
-
+ 
 module.exports = router;
