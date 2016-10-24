@@ -1,21 +1,27 @@
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('maps', {
+    return queryInterface.createTable('users', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      wordId: {
+      email: {
         type: Sequelize.STRING
       },
-      followingUnit: {
+      name: {
         type: Sequelize.STRING
       },
-      weight: {
-        type: Sequelize.DECIMAL
+      password: {
+        type: Sequelize.STRING
+      },
+      facebookId: {
+        type: Sequelize.STRING
+      },
+      facebookToken: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -28,6 +34,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('maps');
+    return queryInterface.dropTable('users');
   }
 };
