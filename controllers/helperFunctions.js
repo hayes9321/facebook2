@@ -78,7 +78,7 @@ Map.prototype.addStart = function(unit){
   this.starts.push(unit);
 }
 
-
+//this function processes the incoming post data
 function processMessage(resultsMap, post){
   var message = post.split(' ');
 
