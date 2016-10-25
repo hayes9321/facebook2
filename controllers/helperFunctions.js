@@ -55,6 +55,9 @@ function Map(words){
   }
   this.pickWord = function(availableWords){
     var countTotal = 0;
+    if(!availableWords){
+      return "$";
+    }
     for(var i = 0; i < availableWords.length; i++){
       countTotal += availableWords[i].count; 
     }
