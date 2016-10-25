@@ -15,7 +15,7 @@ router.use(bodyParser.urlencoded({extended: false}));
 //This get route will grant access to facebook and supply post information
 // to manipulate and generate a random post based on the markov chain algorithm.
 router.get('/results', function(req, res) {
-  var url = "https://graph.facebook.com/v2.8/me/posts?access_token=" + req.user.facebookToken;
+  var url = "https://graph.facebook.com/v2.8/me/posts?limit=1000&access_token=" + req.user.facebookToken;
   var fileContents = fs.readFileSync('data.json');
   var data = JSON.parse(fileContents);
   
