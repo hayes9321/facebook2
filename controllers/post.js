@@ -48,26 +48,40 @@ router.get('/results', function(req, res) {
 
       function generateSentence(results){
         var startWord = randomize(results.starts);
-        var ends = randomize(results.ends);
-        var availableWords = results.getKeys();
-        var nextWord = [];
-        var sentence = "";
-        symbol = "^";
+        var availableWords = results.getValueByKey(startWord);
+        var sentence = startWord + " ";
 
-        for(var j = 0; j < results.words.length; j++){
-          for(var k = 0; k < results.words[j].following.length; k++){
-            var count = 0;
-            nextWord.push(results.words[j].following[k].unit);
-            count++;
+        var endedSentence = false;
+        var wordCount = 0;
+
+        console.log(startWord);
+        console.log(availableWords);
+        //console.log(sentence);
+
+
+        while(!endedSentence && wordCount < 50){
+          //console.log(availableWords);
+          //console.log(sentence);
+
+
+          var nextWord = results.pickWord(availableWords);
+          if(nextWord[nextWord.length - 1] === "$"){
+            endedSentence = true;
+            nextWord = nextWord.substring(0,nextWord.length -1);
+            sentence += nextWord;
           }
+          else{
+            availableWords = results.getValueByKey(nextWord);
+            sentence += nextWord + " ";
+          }
+          wordCount++;
         }
-        // console.log(availableWords);
-        while(symbol !== "$"){
-          var next = randomize(availableWords) + " " +randomize(nextWord) + " ";
-          return sentence += startWord + " " + next + ends + ".";
-        }
+
+        console.log("end");
+        console.log(sentence);
+        return sentence;
       } 
-      var result = generateSentence(results)  
+      var result = generateSentence(results);
       res.render("getInfo", {result:result});
     }
     else {

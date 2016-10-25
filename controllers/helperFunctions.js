@@ -53,9 +53,24 @@ function Map(words){
     }
     this.words.push(new Word(targetUnit, [{unit: addUnit, count: 1}]));
   }
-  
-  this.addEnding = function(unit){
-    this.ends.push(unit);
+  this.pickWord = function(availableWords){
+    var countTotal = 0;
+    for(var i = 0; i < availableWords.length; i++){
+      countTotal += availableWords[i].count; 
+    }
+    if(countTotal === 0){
+      return "$";
+    }
+
+    var random = Math.floor(countTotal * Math.random());
+    var sum = 0;
+    for(var i = 0; i < availableWords.length; i++){
+      sum += availableWords[i].count;
+      if(random < sum){
+        return availableWords[i].unit;
+      }
+    }
+    return "$";
   }
 }
 
@@ -72,13 +87,15 @@ function processMessage(resultsMap, post){
   }
   for(var i = 0; i < message.length; i++){
     if(i + 2 >= message.length){
-      resultsMap.addEnding(message[i], message[i + 1]);
+      resultsMap.addValueToKey(message[i], message[i + 1] + "$");
       return;
     }
     resultsMap.addValueToKey(message[i], message[i + 1]);
   }
   return resultsMap; 
 }
+
+
 
 
 module.exports = {
