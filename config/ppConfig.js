@@ -32,7 +32,7 @@ passport.use(new LocalStrategy({
 passport.use(new FacebookStrategy({
   clientID: process.env.FACEBOOK_APP_ID,
   clientSecret: process.env.FACEBOOK_APP_SECRET,
-  callbackURL: process.env.BASE_URL + '/auth/callback/facebook',
+  callbackURL: process.env.BASE_URL + 'auth/callback/facebook',
   profileFields: ['id', 'email', 'displayName', 'photos','posts','feed'],
   enableProof: true
 }, function(accessToken, refreshToken, profile, cb) {
