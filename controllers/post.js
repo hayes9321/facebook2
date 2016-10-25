@@ -73,7 +73,7 @@ router.get('/results', function(req, res) {
         return sentence;
       } 
       //store the sentence in a varible so that it can be sent to the
-      //render
+      //render 
       var result = generateSentence(results);
       res.render("getInfo", {result:result});
     }
