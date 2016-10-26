@@ -36,6 +36,11 @@ app.get('/profile', isLoggedIn, function(req, res) {
   res.render('profile');
 });
 
+app.get("/termsandconditions", function(req, res) {
+	var user = req.user;
+	res.render("privacy_and_Tc", {user: user});
+});
+
 app.use('/post', require('./controllers/post'));
 app.use('/auth', require('./controllers/auth'));
 
