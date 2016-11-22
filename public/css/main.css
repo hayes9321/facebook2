@@ -1,6 +1,9 @@
-body {
-	background-color: white; 
+body{
+	background-image: url('public/css/images/cover.png');
+	background-size:cover;
+	background-repeat: no-repeat;
 }
+
 .wrapper{
 margin-top: 10px;
 text-align: center;
@@ -36,6 +39,16 @@ body .navbar {
 #Home .loginButton{
 	margin-top: 225px;
 	font-size: 16px;
-	
-
 }
+/******Results-Page*******/
+#Results{
+	background-color: rgba(0,0,0,0.4);
+	margin-top: 100px;
+	border: solid 2px black;
+	height: 499px;
+}
+
+
+
+
+
