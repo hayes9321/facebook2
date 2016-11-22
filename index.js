@@ -1,6 +1,7 @@
 require('dotenv').config();
 var express = require('express');
 var ejsLayouts = require('express-ejs-layouts');
+var path = require('path');
 var bodyParser = require('body-parser');
 var passport = require('./config/ppConfig');
 var session = require('express-session');
@@ -13,6 +14,7 @@ app.set('view engine', 'ejs');
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
+app.use('/public', express.static(path.join(__dirname, '/public/')));
 app.use(session({
   secret: process.env.SESSION_SECRET || 'mysupercoolsecret',
   resave: false,
@@ -29,7 +31,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  res.render('index');
+  res.render('home');
 });
 
 app.get('/profile', isLoggedIn, function(req, res) {
