@@ -1,11 +1,12 @@
-
+<div id="Alert">
 <% if (alerts.error) { %>
   <% alerts.error.forEach(function(msg) { %>
-    <div class="alert alert-danger"><%= msg %></div>
+    <div class="alert alert-danger" class = data-dismiss"alert"><a href=# class="close" data-dismiss="alert">&times;</a><%= msg %></div>
   <% }); %>
 <% } %>
 <% if (alerts.success) { %>
   <% alerts.success.forEach(function(msg) { %>
-    <div class="alert alert-success"><%= msg %></div>
+    <div class="alert alert-success"><a href=# class="close" data-dismiss="alert">&times;</a><%= msg %></div>
   <% }); %>
 <% } %>
+</div>

@@ -1,4 +1,5 @@
 body{
+	margin-top: 40px;
 	background-image: url('public/css/images/cover.png');
 	background-size:cover;
 	background-repeat: no-repeat;
@@ -21,7 +22,7 @@ body .navbar {
 /******Home-layout**********/
 #Home {
 	background-color: rgba(0,0,0,0.4);
-	margin-top: 100px;
+	margin-top: 60px;
 	border: solid 2px black;
 	height: 499px;
 }
@@ -40,14 +41,32 @@ body .navbar {
 	margin-top: 225px;
 	font-size: 16px;
 }
-/******Results-Page*******/
-#Results{
-	background-color: rgba(0,0,0,0.4);
-	margin-top: 100px;
-	border: solid 2px black;
-	height: 499px;
+/*******Alert*************/
+
+#Alert{
+	margin-top:20px;
+	margin-bottom: 0px;
 }
 
+/******Results-Page*******/
+#Results{
+	background-color: rgba(0,0,0,0.6);
+	padding-top: 40px;
+	margin-top: 60px;
+	border: solid 2px black;
+	height: 425px;
+}
+
+#Results p{
+	font-size: 28px;
+	color:white;
+}
+.generateBtn a{
+	color: white;
+}
+.generateBtn {
+	font-size: 28px;
+}
 
 
 
