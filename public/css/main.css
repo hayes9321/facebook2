@@ -21,30 +21,37 @@ body .navbar {
 }
 /******Home-layout**********/
 #Home {
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.6);
 	margin-top: 60px;
+	padding-top: 30px;
 	border: solid 2px black;
 	height: 499px;
 }
 #Home a{
+	font-family: 'Noticia Text', serif;
 	color: white;
-	font-size: 28px;
+	font-size: 22px;
 }
 #Home h2{
-	font-size: 38px;
+	font-family: 'Noticia Text', serif;
+	font-size: 42px;
+}
+#Home h3{
+	font-family: 'Noticia Text', serif;
 }
 #Home .homeContainer{
 	color: white;
 	margin: 0 auto;
 }
 #Home .loginButton{
-	margin-top: 225px;
-	font-size: 16px;
+	font-family: 'Noticia Text', serif;
+	margin-top: 125px;
+	font-size: 24px;
 }
 /*******Alert*************/
 
 #Alert{
-	margin-top:20px;
+	margin-top:10px;
 	margin-bottom: 0px;
 }
 
@@ -52,21 +59,22 @@ body .navbar {
 #Results{
 	background-color: rgba(0,0,0,0.6);
 	padding-top: 40px;
-	margin-top: 60px;
+	margin-top: 40px;
 	border: solid 2px black;
 	height: 425px;
 }
 
 #Results p{
+	font-family: 'Noticia Text', serif;
 	font-size: 28px;
 	color:white;
 }
 .generateBtn a{
+	font-family: 'Noticia Text', serif;
 	color: white;
+	font-size: 24px;
 }
-.generateBtn {
-	font-size: 28px;
-}
+
 
 
 
