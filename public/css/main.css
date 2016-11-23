@@ -1,7 +1,9 @@
+html{
+	height: 100%;
+}
 body{
-	margin-top: 40px;
-	background-image: url('public/css/images/cover.png');
-	background-size:cover;
+	background-image: url('./images/cover.png');
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
@@ -10,23 +12,15 @@ margin-top: 10px;
 text-align: center;
 }
 .container{
-height: 400px;
-width: 500px;         
-margin: 20px auto;
+position: relative;      
+
 }
 /******NavBar***************/
-
-body .navbar {
-	background-color: red;
-}
+#Navbar .bar{
+	float: left;
+	font-family: 'Noticia Text', serif;
+} 
 /******Home-layout**********/
-#Home {
-	background-color: rgba(0,0,0,0.6);
-	margin-top: 60px;
-	padding-top: 30px;
-	border: solid 2px black;
-	height: 499px;
-}
 #Home a{
 	font-family: 'Noticia Text', serif;
 	color: white;
@@ -34,34 +28,73 @@ body .navbar {
 }
 #Home h2{
 	font-family: 'Noticia Text', serif;
+	color:white;
 	font-size: 42px;
 }
 #Home h3{
 	font-family: 'Noticia Text', serif;
+	color: white;
 }
 #Home .homeContainer{
-	color: white;
+	background-color: rgba(0,0,0,0.6);
 	margin: 0 auto;
+	margin-top: 60px;
+	padding-top: 30px;
+	border: solid 2px black;
+	height: 90%;
 }
 #Home .loginButton{
 	font-family: 'Noticia Text', serif;
 	margin-top: 125px;
 	font-size: 24px;
 }
+@media(max-width: 500px){
+	body{
+		background-image: url('./images/cover.png');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	#Home a{
+		font-size: 18px;
+	}
+	#Home h2{
+		font-size: 35px;
+		margin-bottom: 60px; 
+	}
+	#Home h3{
+		font-size: 20px;
+	}
+	#Home .homeContainer{
+		background-color: rgba(0,0,0,0.7);
+		margin: 0 auto;
+		margin-top: 60px;
+		padding-top: 30px;
+		border: solid 2px black;
+		width: 100%;
+		height: 100%;
+	}
+	#Home .loginButton{
+		font-family: 'Noticia Text', serif;
+		margin-top: 145px;
+		font-size: 16px;
+	}
+}
 /*******Alert*************/
 
 #Alert{
-	margin-top:10px;
+	margin-top:30px;
 	margin-bottom: 0px;
 }
 
 /******Results-Page*******/
 #Results{
-	background-color: rgba(0,0,0,0.6);
-	padding-top: 40px;
-	margin-top: 40px;
+	background-color: rgba(0,0,0,0.7);
+	margin: 0 auto;
+	margin-top: 60px;
+	padding-top: 30px;
 	border: solid 2px black;
-	height: 425px;
+	width: 100%;
+	height: 100%;
 }
 
 #Results p{
