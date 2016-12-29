@@ -1,27 +1,13 @@
-# Express Authentication
+#How To Use
 
-Express authentication template using Passport + flash messages + custom middleware
+  In order to use Facebook Comment Generator click Login With Facebook. You will be redirected to facebook, accept the app's terms and conditions. After accepting the terms and conditions you are free to generate as many random posts as you like!
 
-## Getting Started
+#About App
+  The app can be used in both mobile and web views.
 
-#### Scaffold w/tests (see `master` branch)
+  Facebook Comment Generator is a app that utilizes Facebook’s graph API. The app uses a Markov chain algorithm to generate a random post you might say, based on post you have made through Facebook.
 
-* Run `npm install` to install dependencies
-  * Use `npm run lint:js` to lint your JS
-  * Use `npm run lint:css` to lint your CSS
-  * Use `npm test` to run tests
-* Setup the databases
-  * Change the database names in `config/config.json` to reflect your project
-  * Run `createdb project_name_development` to create the development database
-  * Run `createdb project_name_test` to create the test database
+  My personal goal for this app is to improve my object oriented programming skills, build a backend that accepts information from an API and sorts the data into a useable sentence that can be passed into the client view as a random post someone might say. 
 
-#### Finished version (see `brian-finished` branch)
 
-* Run `npm install` to install dependencies
-  * Use `npm run lint:js` to lint your JS
-  * Use `npm run lint:css` to lint your CSS
-  * Use `npm test` to run tests
-* Setup the databases
-  * Run `createdb express_auth_development` to create the development database
-  * Run `createdb express_auth_test` to create the test database
-  * Run `sequelize db:migrate` to run migrations
+
