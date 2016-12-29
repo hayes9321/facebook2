@@ -5,9 +5,9 @@
 #About App
   The app can be used in both mobile and web views.
 
-  Facebook Comment Generator is a app that utilizes Facebook’s graph API. The app uses a Markov chain algorithm to generate a random post you might say, based on post you have made through Facebook.
+  Facebook Comment Generator is an app that utilizes Facebook’s graph API. The app uses a Markov chain algorithm to generate a random post you might say, based on post data obtained through Facebook's Graph API.
 
-  My personal goal for this app is to improve my object oriented programming skills, build a backend that accepts information from an API and sorts the data into a useable sentence that can be passed into the client view as a random post someone might say. 
+  My personal goal for this app is to improve my object oriented programming skills, build a backend that accepts information from an API and sort incoming data with the help of a Markov chain.
 
 
 
